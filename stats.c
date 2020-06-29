@@ -9,13 +9,13 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c
+ * @brief Implementation file for M1 Assessment
  *
- * <Add Extended Description Here>
+ * This file contains the main() and the definitions for other statistical tasks such as mena, median, m  maximum, minimum. The print_array() and the sort_array() is called explicitly within the main() with the teat dataset passed as input
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Sibin Kurian
+ * @date 29-06-2020
  *
  */
 
@@ -36,8 +36,44 @@ void main() {
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
   /* Other Variable Declarations Go Here */
+ 
   /* Statistics and Printing Functions Go Here */
+
 
 }
 
-/* Add other Implementation File Code Here */
+void print_array(unsigned char *start,int size)
+{
+
+}
+
+int find_maximum(unsigned char *start,int size)
+{
+
+}
+
+int find_minimum(unsigned char *start,int size)
+{
+
+
+}
+
+float find_mean(unsigned char *start, int size)
+{
+
+}
+
+float find_median(unsigned char *start, int size)
+{
+
+}
+
+void sort_array(unsigned char *start, int size)
+{
+
+}
+
+void print_statistics(unsigned char *start, int size)
+{
+
+}

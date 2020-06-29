@@ -96,7 +96,7 @@ float find_median(unsigned char *start, int size)
 {
         int midindex = 0;
 	midindex = (size/2) - 1;
-	unsigned char *miditem = start + midindex -1;
+	unsigned char *miditem = start + midindex;
 	
 	return (*miditem + *(miditem+1))/2;
 }
@@ -121,11 +121,11 @@ void sort_array(unsigned char *start, int size)
 
 void print_statistics(unsigned char *start, int size)
 {
-	int median, maximum, minimum;
-	float mean;
+	int  maximum,minimum;
+	float median,mean;
         median = find_median(start,size);
 	mean = find_mean(start,size);
 	maximum = find_maximum(start,size);
 	minimum = find_minimum(start,size);
-	printf("Mean = %f\nMedian = %d\nMaximum = %d\nMinimmum = %d\n",mean,median,maximum,minimum);
+	printf("Mean = %f\nMedian = %f\nMaximum = %d\nMinimmum = %d\n",mean,median,maximum,minimum);
 }	

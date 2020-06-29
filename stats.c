@@ -127,5 +127,5 @@ void print_statistics(unsigned char *start, int size)
 	mean = find_mean(start,size);
 	maximum = find_maximum(start,size);
 	minimum = find_minimum(start,size);
-	printf("Mean = %f\nMedian = %f\nMaximum = %d\nMinimmum = %d\n",mean,median,maximum,minimum);
+	printf("Mean = %f\nMedian = %d\nMaximum = %d\nMinimmum = %d\n",mean,median,maximum,minimum);
 }	

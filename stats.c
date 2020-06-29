@@ -35,45 +35,97 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
-  /* Other Variable Declarations Go Here */
- 
-  /* Statistics and Printing Functions Go Here */
-
-
+  print_array(test,SIZE);
+  sort_array(test, SIZE);
+  print_statistics(test, SIZE);
+  print_array(test,SIZE);
 }
 
 void print_array(unsigned char *start,int size)
 {
-
+	unsigned char *end = start + size -1;
+	for (; start <= end ; start++)
+	{
+		printf("%d ",*start);
+	}
+	printf("\n");
 }
 
 int find_maximum(unsigned char *start,int size)
 {
-
+	unsigned char *end = start + size -1;
+        int max = 0;
+	for(; start <= end ; start++)
+	{
+		if(*start >= max)
+		{
+			max = *start;
+		}
+	}
+        return max;
 }
 
 int find_minimum(unsigned char *start,int size)
 {
-
-
+	unsigned char *end = start + size -1;
+	int min = *start;
+	for(; start <= end ; start++)
+	{
+		if(*start <= min)
+		{
+			min =*start;
+		}
+	}
+	return min;
 }
 
 float find_mean(unsigned char *start, int size)
 {
-
+	unsigned char *end = start + size -1;
+	int sum = 0;
+	float avg;
+	for(;start <= end; start++)
+	{
+		sum+=*start;
+	}
+	avg = sum/size;
+	return avg;
 }
 
 float find_median(unsigned char *start, int size)
 {
-
+        int midindex = 0;
+	midindex = (size/2) - 1;
+	unsigned char *miditem = start + midindex -1;
+	
+	return (*miditem + *(miditem+1))/2;
 }
 
 void sort_array(unsigned char *start, int size)
 {
-
+	unsigned char *end = start + size -1;
+	for(; start <= end; start++)
+	{
+		for(unsigned char *next = start +1; next <= end; next++)
+		{
+			int temp;
+			if( *next > *start)
+			{
+				temp = *start;
+				*start = *next;
+			        *next = temp;
+			}
+		}
+	}
 }
 
 void print_statistics(unsigned char *start, int size)
 {
-
-}
+	int median, maximum, minimum;
+	float mean;
+        median = find_median(start,size);
+	mean = find_mean(start,size);
+	maximum = find_maximum(start,size);
+	minimum = find_minimum(start,size);
+	printf("Mean = %f\nMedian = %f\nMaximum = %d\nMinimmum = %d\n",mean,median,maximum,minimum);
+}	

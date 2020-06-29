@@ -1,4 +1,3 @@
-/* Add Author and Project Details here */
 
 Author : Sibin Kurian
 Date : 28-06-2020
